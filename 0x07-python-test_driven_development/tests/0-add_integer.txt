@@ -1,0 +1,50 @@
+===============================
+ How to Use 0-add_integer.py
+===============================
+
+This library is very simple, since it only has one function called
+``add_integer()``.
+
+integers
+=======
+
+``add_integer()`` returns the addition of a and b using the ``+`` operator.
+
+::
+
+    >>> add_integer = __import__("0-add_integer").add_integer
+    >>> add_integer(4, 5)
+    9
+    >>> add_integer(9, -7)
+    2
+
+the second argument b is optional. it is evaluated as 98
+
+::
+
+	>>> add_integer(8,)
+	106
+
+for floating point numbers, they must be first casted to integers
+::
+
+    >>> add_integer(7.3, 4.2)
+    11
+    >>> add_integer(7.5, 3.9)
+    10
+
+Non integers or floating point numbers
+======================================
+
+for inputs that are either integer or float it should raise a typeError
+::
+
+    >>> add_integer(3, "man")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+    >>> add_integer("a", 7)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+    >>> add_integer("aaa", "bbb")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
