@@ -8,6 +8,10 @@ integers
 ========
 >>> MyList = __import__('1-my_list').MyList
 >>> my_list = MyList()
+
+for empty list
+>>> my_list.print_sorted()
+[]
 >>> my_list.append(1)
 >>> my_list.append(2)
 >>> my_list.append(5)
@@ -45,3 +49,15 @@ for print_sorted function
 =========================
 >>> my_list.print_sorted()
 [1, True, 2, 5, 8, 8.7, 9]
+>>> print(my_list)
+[1, 2, 5, 8, 8.7, True, 9]
+
+for negative
+>>> my_list.append(-3)
+>>> print(my_list)
+[1, 2, 5, 8, 8.7, True, 9, -3]
+
+for too many argument
+>>> my_list.print_sorted(1)
+Traceback (most recent call last):
+TypeError: print_sorted() takes 1 positional argument but 2 were given
