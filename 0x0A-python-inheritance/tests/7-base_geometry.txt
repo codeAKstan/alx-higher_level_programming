@@ -36,3 +36,12 @@ only one input
 >>> bg.integer_validator("man",)
 Traceback (most recent call last):
 TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+more that 2 inputs
+=================
+>>> bg.integer_validator("width", 89, 6)
+Traceback (most recent call last):
+TypeError: integer_validator() takes 3 positional arguments but 4 were given
+>>> bg.integer_validator("width", 89, 6, 8)
+Traceback (most recent call last):
+TypeError: integer_validator() takes 3 positional arguments but 5 were given
