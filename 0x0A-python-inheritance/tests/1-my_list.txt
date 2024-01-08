@@ -1,0 +1,47 @@
+===================
+Help on 1-my_list
+===================
+
+the function `print_sorted` print list in sorted form in `MyList` class that inherits from list
+
+integers
+========
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(2)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 2, 5]
+>>> my_list.append(8)
+>>> print(my_list)
+[1, 2, 5, 8]
+
+we assumed all the elements of the lists will be integers
+
+non-integers
+============
+>>> my_list.append(t)
+Traceback (most recent call last):
+NameError: name 't' is not defined
+
+floats
+======
+>>> my_list.append(8.7)
+>>> print(my_list)
+[1, 2, 5, 8, 8.7]
+
+Boolean
+=======
+>>> my_list.append(True)
+>>> print(my_list)
+[1, 2, 5, 8, 8.7, True]
+>>> t = 9
+>>> my_list.append(t)
+>>> print(my_list)
+[1, 2, 5, 8, 8.7, True, 9]
+
+for print_sorted function
+=========================
+>>> my_list.print_sorted()
+[1, True, 2, 5, 8, 8.7, 9]
