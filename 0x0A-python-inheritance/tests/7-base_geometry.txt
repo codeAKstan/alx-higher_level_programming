@@ -24,3 +24,15 @@ TypeError: str must be an integer
 integers
 ========
 bg.integer_validator("side_length", 5)
+
+no input
+=========
+>>> bg.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+only one input
+===============
+>>> bg.integer_validator("man",)
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
